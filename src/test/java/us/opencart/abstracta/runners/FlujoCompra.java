@@ -12,6 +12,6 @@ import org.junit.runner.RunWith;
         glue = "us.opencart.abstracta.stepDefinitions",
         snippets = CucumberOptions.SnippetType.CAMELCASE
 )
-public class AgregarProductos {
+public class FlujoCompra {
 
 }
