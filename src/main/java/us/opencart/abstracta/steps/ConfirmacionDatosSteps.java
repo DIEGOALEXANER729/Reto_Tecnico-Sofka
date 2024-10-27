@@ -3,6 +3,7 @@ package us.opencart.abstracta.steps;
 import net.thucydides.core.annotations.Step;
 import us.opencart.abstracta.pages.CarritoPage;
 import us.opencart.abstracta.pages.ConfirmacionDatosPage;
+import us.opencart.abstracta.utils.EsperaExplicita;
 import us.opencart.abstracta.utils.Excel;
 
 import java.io.IOException;
@@ -16,10 +17,12 @@ public class ConfirmacionDatosSteps {
 
     @Step("Click en Guest Checkout")
     public void hacerClicEnGuestCheckout(){
+        EsperaExplicita.esperarPorElementoClicable(confirmacionDatosPage.getDriver(), confirmacionDatosPage.getBtnCheckoutComoInvitado(), 5);
         confirmacionDatosPage.getDriver().findElement(confirmacionDatosPage.getBtnCheckoutComoInvitado()).click();
     }
     @Step("Click Step 1   Checkout Options ")
     public void hacerClicEnContinuarOpcionPago(){
+        EsperaExplicita.esperarPorElementoClicable(confirmacionDatosPage.getDriver(), confirmacionDatosPage.getBtnOpcionDePago(), 5);
         confirmacionDatosPage.getDriver().findElement(confirmacionDatosPage.getBtnOpcionDePago()).click();
     }
 
@@ -49,33 +52,35 @@ public class ConfirmacionDatosSteps {
     }
 
     @Step("Click en Step 2 Billing Details")
-    public void hacerClicEnDetallesDeFacturación(){
-
+    public void hacerClicEnDetallesDeFacturacion(){
+        EsperaExplicita.esperarPorElementoClicable(confirmacionDatosPage.getDriver(), confirmacionDatosPage.getBtnContinuarDetallesFacturacion(), 5);
         confirmacionDatosPage.getDriver().findElement(confirmacionDatosPage.getBtnContinuarDetallesFacturacion()).click();
 
     }
 
     @Step("Click en Step 4 Delivery Method ")
     public void hacerClicMetodoDeEntrega(){
-
+        EsperaExplicita.esperarPorElementoClicable(confirmacionDatosPage.getDriver(), confirmacionDatosPage.getBtnContinuarOpcionDeEntrega(), 5);
         confirmacionDatosPage.getDriver().findElement(confirmacionDatosPage.getBtnContinuarOpcionDeEntrega()).click();
 
     }
 
     @Step("Click en Step5 Payment Method")
     public void hacerClicMetodoDepago(){
-
+        EsperaExplicita.esperarPorElementoClicable(confirmacionDatosPage.getDriver(), confirmacionDatosPage.getBtnContinuarMetodoDePago(), 5);
         confirmacionDatosPage.getDriver().findElement(confirmacionDatosPage.getBtnContinuarMetodoDePago()).click();
 
     }
 
     @Step("Hacer clic en términos y condiciones")
     public void hacerClicEnTerminosYCondiciones(){
+        EsperaExplicita.esperarPorElementoClicable(confirmacionDatosPage.getDriver(), confirmacionDatosPage.getChkTerminosCondiciones(), 5);
         confirmacionDatosPage.getDriver().findElement(confirmacionDatosPage.getChkTerminosCondiciones()).click();
     }
 
     @Step("Hacer click en confirmar pedido")
     public void hacerClicConfirmarPedido(){
+        EsperaExplicita.esperarPorElementoClicable(confirmacionDatosPage.getDriver(), confirmacionDatosPage.getBtnConfirmarPedido(), 5);
         confirmacionDatosPage.getDriver().findElement(confirmacionDatosPage.getBtnConfirmarPedido()).click();
     }
 

@@ -78,7 +78,7 @@ test {
 
 serenity{
     testRoot="us.opencart.abstracta.runners"
-    requirementsBaseDir="src/test/resources/features/AgregarProductos.feature"
+    requirementsBaseDir="src/test/resources/features/FlujoCompra.feature"
     reports=["single-page-html"]
 }
 
