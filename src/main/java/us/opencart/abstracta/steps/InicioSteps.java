@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import us.opencart.abstracta.pages.InicioPage;
+import us.opencart.abstracta.utils.ClicElementoLista;
 import us.opencart.abstracta.utils.EsperaImplicita;
 import net.thucydides.core.annotations.Step;
 import us.opencart.abstracta.utils.Excel;
@@ -108,8 +109,6 @@ public class InicioSteps {
     @Step("Registrar datos  personales formulario")
     public void registrarDatosPersonales()throws IOException {
 
-
-
         ArrayList<Map<String, String>> data = Excel.leerDatosDeHojaDeExcel("Data.xlsx", "Formulario");
 
         // Asumimos que quieres llenar el formulario con los datos de la primera fila (índice 0)
@@ -123,21 +122,57 @@ public class InicioSteps {
         inicio.getDriver().findElement(inicio.getCompany()).sendKeys(registro.get("Company")); // Llenar Company
         inicio.getDriver().findElement(inicio.getAddress1()).sendKeys(registro.get("Address 1")); // Llenar Address 1
         inicio.getDriver().findElement(inicio.getAddress2()).sendKeys(registro.get("Address 2")); // Llenar Address 2
+        inicio.getDriver().findElement(inicio.getCity()).sendKeys(registro.get("City"));
         inicio.getDriver().findElement(inicio.getPostCode()).sendKeys(registro.get("Post Code")); // Llenar Post Code
-
         // Seleccionar el país (Colombia tiene el valor "47")
         inicio.selectCountryByValue("47"); // Selecciona "Colombia"
-    // Seleccionar la región/estado (Quindio tiene el texto visible "Quindio")
+        // Seleccionar la región/estado (Quindio tiene el texto visible "Quindio")
         inicio.selectRegionByVisibleText("Quindio"); // Selecciona "Quindio" como región
-
-
-
 
     }
 
+    @Step("Click en Continue2")
+    public void clickContinue2(){
 
+        inicio.getDriver().findElement(inicio.getBtnContinue2()).click();
 
-       // inicio.getDriver().findElement(inicio.getRegionState()).sendKeys(registro.get("Region / State")); // Llenar Region / State
+    }
+
+    @Step("Click en Continue3")
+    public void clickContinue3(){
+
+        inicio.getDriver().findElement(inicio.getBtnContinue3()).click();
+
+    }
+
+    @Step("Click en Continue4")
+    public void clickContinue4(){
+
+        inicio.getDriver().findElement(inicio.getBtnContinue4()).click();
+
+    }
+    @Step("Click en ConfirmaOrder")
+    public void clickConfirmarOrdem(){
+
+        inicio.getDriver().findElement(inicio.getBtnConfirmOrder()).click();
+
+    }
+
+    @Step("check en terminosCondiciones")
+    public void CheckTerminosCondiciones(){
+
+        inicio.getDriver().findElement(inicio.getChechTerminsCondiciones()).click();
+
+    }
+
+    @Step("Validacion compra reaizada")
+    public void validarCompraSatisfactoria(){
+        EsperaImplicita.esperaImplicita(3);
+
+        Assert.assertTrue(inicio.getDriver().findElement(inicio.getLblOrderPlaced()).isDisplayed());
+
+    }
+
 
 
 

@@ -63,6 +63,22 @@ public class InicioPage extends PageObject {
 
     By RegionState = By.xpath("//*[@id='input-payment-zone']");
 
+    By btnContinue2 = By.xpath("//*[@id='button-guest']");
+
+    By btnContinue3 = By.xpath("//*[@id='button-shipping-method']");
+
+    By chechTerminsCondiciones = By.xpath("//*[contains(@name, \"agree\")]");
+
+    By btnContinue4 = By.xpath("//*[@id='button-payment-method']");
+
+
+
+    By btnConfirmOrder = By.xpath("//*[@id='button-confirm']");
+
+    By lblOrderPlaced = By.xpath("//div[@id='content']/h1[contains(text(), 'Your order has been placed!')]");
+
+
+
 
 
 
@@ -191,5 +207,29 @@ public class InicioPage extends PageObject {
 
     public By getRegionState() {
         return RegionState;
+    }
+
+    public By getBtnContinue2() {
+        return btnContinue2;
+    }
+
+    public By getBtnContinue3() {
+        return btnContinue3;
+    }
+
+    public By getChechTerminsCondiciones() {
+        return chechTerminsCondiciones;
+    }
+
+    public By getBtnContinue4() {
+        return btnContinue4;
+    }
+
+    public By getBtnConfirmOrder() {
+        return btnConfirmOrder;
+    }
+
+    public By getLblOrderPlaced() {
+        return lblOrderPlaced;
     }
 }

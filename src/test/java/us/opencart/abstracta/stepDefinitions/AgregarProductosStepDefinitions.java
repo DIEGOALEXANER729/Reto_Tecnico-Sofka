@@ -79,15 +79,26 @@ public class AgregarProductosStepDefinitions {
 
     @Entonces("el usuario confirma la orden")
     public void elUsuarioConfirmaLaOrden() {
-        // Aquí asumo que tienes un método en inicioSteps para confirmar la orden
+
+        inicioSteps.clickContinue2();
+        EsperaImplicita.esperaImplicita(2);
+        inicioSteps.clickContinue3();
+        EsperaImplicita.esperaImplicita(2);
+        inicioSteps.CheckTerminosCondiciones();
+        inicioSteps.clickContinue4();
+        EsperaImplicita.esperaImplicita(2);
+        inicioSteps.clickConfirmarOrdem();
+        EsperaImplicita.esperaImplicita(2);
+
 
     }
 
 
     @Entonces("el mensaje Your order has been placed! debe aparecer en la página de confirmación")
     public void elMensajeYourOrderHasBeenPlacedDebeAparecerEnLaPáginaDeConfirmación() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+        inicioSteps.validarCompraSatisfactoria();
+
     }
 
 
