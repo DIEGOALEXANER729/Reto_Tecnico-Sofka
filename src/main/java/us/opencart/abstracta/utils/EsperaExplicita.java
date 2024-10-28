@@ -10,7 +10,13 @@ import java.time.Duration;
 
 public class EsperaExplicita {
 
-    // Método para esperar a que un elemento sea clickeable
+    /*
+      Esta clase proporciona métodos de espera explícita para facilitar
+      la sincronización en las pruebas automatizadas. Ayuda a evitar
+      condiciones de carrera al asegurarse de que los elementos sean
+      interactivos antes de realizar acciones sobre ellos.
+    */
+    // Metodo para esperar a que un elemento sea clickeable
     public static void esperarPorElementoClicable(WebDriver driver, By by, int tiempoEspera) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(tiempoEspera));
         wait.until(ExpectedConditions.elementToBeClickable(by));

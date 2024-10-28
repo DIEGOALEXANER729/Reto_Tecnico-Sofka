@@ -1,19 +1,23 @@
 package us.opencart.abstracta.steps;
 
 
-import org.junit.Assert;
+
 import org.openqa.selenium.Keys;
 import us.opencart.abstracta.pages.InicioPage;
-import us.opencart.abstracta.pages.ProductoPage;
 import us.opencart.abstracta.utils.EsperaImplicita;
 import net.thucydides.core.annotations.Step;
 import us.opencart.abstracta.utils.Excel;
-import us.opencart.abstracta.utils.EsperaExplicita; // Importa la clase de esperas explícitas
-import net.thucydides.core.annotations.Step;
+import us.opencart.abstracta.utils.EsperaExplicita;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Map;
 
+/*
+   Esta clase maneja las interacciones de la página de inicio de la aplicación,
+   permitiendo realizar acciones como abrir el navegador, buscar productos,
+   y gestionar el carrito de compras. Se implementan esperas explícitas para
+   garantizar la estabilidad de las interacciones con los elementos de la página.
+*/
 
 public class InicioSteps {
 
@@ -62,22 +66,15 @@ public class InicioSteps {
         indiceActual++;
     }
 
-
     @Step("presionar enter Campo buscar")
     public void presionarEnterEnCampoBusqueda(){
         inicio.getDriver().findElement(inicio.getTxtCampoBusqueda()).sendKeys(Keys.ENTER);
 
     }
 
-
-
     @Step("Click en View Cart")
     public void hacerClicEnVerCarrito(){
         EsperaExplicita.esperarPorElementoClicable(inicio.getDriver(), inicio.getLnkVerCarrito(), 5);
         inicio.getDriver().findElement(inicio.getLnkVerCarrito()).click();
     }
-
-
-
-
 }

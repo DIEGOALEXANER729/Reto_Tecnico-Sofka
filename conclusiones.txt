@@ -1,0 +1,12 @@
+Conclusiones:
+
+- Se evidenció que el patrón de diseño Page Object Model (POM) el cual use para realizar este proyecyo promueve un enfoque estructurado y ordenado en el desarrollo de pruebas automatizadas. Esto facilita la legibilidad y el mantenimiento del código.
+- Se optó por almacenar la información de los productos y los datos con los cuales se llenara el formulario de compra  en un archivo de Excel, lo que permite realizar modificaciones de manera sencilla  sin la necesidad de repetir la misma prueba en cada ejecución. Este enfoque no solo facilita la adaptabilidad de las pruebas, sino que también establece una base sólida para escalar la automatización en el futuro.
+- En el transcurso de las pruebas manuales realizadas antes de la automatización, se detectaron varios defectos. Algunos elementos de la barra de navegación no eran interactivos, y se notó que ciertos productos requieren información adicional antes de poder ser agregados al carrito, lo que puede complicar el flujo de compra. Además, se identificó que hay varios elementos que, a pesar de tener un identificador único, no son localizables mediante ese ID. También se observó que la variedad de productos disponibles es limitada. Por último, se deben implementar esperas adecuadas para garantizar que los elementos sean visibles o clickeables, asegurando así que la automatización se ejecute sin inconvenientes.
+- Se logró cumplir con los requisitos documentales establecidos, lo que proporciona una base sólida para futuras mejoras. La implementación del patrón Page Object Model (POM) ha permitido estructurar el código de manera clara y modular, facilitando su mantenimiento y escalabilidad. Gracias a esta metodología, es posible realizar mejoras incrementales sin complicaciones, ya que los cambios pueden aplicarse de forma aislada en cada página. Esto asegura un código limpio y fácil de entender, lo que a su vez potencia la eficiencia en el desarrollo de pruebas automatizadas.
+- El uso del patrón POM nos facilita la reutilización de código entre diferentes pruebas, lo que contribuye a un desarrollo más ágil y a la reducción de redundancias.
+-
+
+
+
+

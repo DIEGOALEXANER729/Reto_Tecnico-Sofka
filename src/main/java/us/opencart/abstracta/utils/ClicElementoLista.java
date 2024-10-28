@@ -1,7 +1,6 @@
 package us.opencart.abstracta.utils;
 
 import org.openqa.selenium.WebElement;
-
 import java.util.List;
 
 

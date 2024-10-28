@@ -4,7 +4,6 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -13,6 +12,13 @@ import java.util.Iterator;
 import java.util.Map;
 
 public class Excel {
+
+    /*
+      Este metodo lee los datos de una hoja de Excel específica y
+      devuelve una lista de mapas, donde cada mapa representa una
+      fila de datos con pares clave-valor. La clave corresponde
+      al encabezado de la columna y el valor es el dato de la celda.
+    */
 
     public static ArrayList<Map<String, String>> leerDatosDeHojaDeExcel(String nombreArchivo, String hojaDeExcel) throws IOException {
         ArrayList<Map<String, String>> arrayListDatoPlanTrabajo = new ArrayList<>();

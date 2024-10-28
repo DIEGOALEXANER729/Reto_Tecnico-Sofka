@@ -10,6 +10,11 @@ import java.io.IOException;
 
 public class FlujoCompraStepDefinitions {
 
+    /*
+      Esta clase define los pasos (step definitions) para el flujo de compra en
+      la aplicación de comercio electrónico. Utiliza la anotación @Steps de
+      Serenity para inyectar los pasos correspondientes en el flujo de pruebas.
+    */
     @Steps
     InicioSteps inicioSteps;
 
@@ -85,7 +90,6 @@ public class FlujoCompraStepDefinitions {
         confirmacionDatosSteps.hacerClicMetodoDepago();
         confirmacionDatosSteps.hacerClicConfirmarPedido();
     }
-
     @Entonces("el mensaje Your order has been placed! debe aparecer en la página de confirmación")
     public void elMensajeYourOrderHasBeenPlacedDebeAparecerEnLaPáginaDeConfirmación() {
         ordenSatisfactoriaSteps.verificarCompraExitosa();

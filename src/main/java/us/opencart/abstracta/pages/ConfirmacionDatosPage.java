@@ -7,6 +7,7 @@ import net.serenitybdd.core.pages.PageObject;
 
 public class ConfirmacionDatosPage extends PageObject  {
 
+    //Declaracion de Xpath para la pagina de confirmacion de compra
 
     By btnCheckoutComoInvitado = By.xpath("//input[@type='radio' and @name='account' and @value='guest']");
 
@@ -31,6 +32,11 @@ public class ConfirmacionDatosPage extends PageObject  {
     By txtCodigoPostal = By.xpath("//*[@id='input-payment-postcode']");
 
     By txtRegionEstado = By.xpath("//*[@id='input-payment-zone']");
+
+    // Este bloque de código define elementos de la interfaz de usuario relacionados con el proceso de facturación y entrega en el flujo de compra.
+    // Incluye dropdowns para seleccionar el país y la región, así como botones para continuar con diferentes etapas del proceso de compra,
+    // incluyendo la aceptación de términos y condiciones, la selección del metodo de pago y la confirmación del pedido.
+
 
     @FindBy(id = "input-payment-country")
     private WebElementFacade countryDropdown; // Dropdown para seleccionar el país
