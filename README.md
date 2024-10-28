@@ -19,7 +19,6 @@ Para ejecutar la automatización, sigue estos pasos:
    
 ![image](https://github.com/user-attachments/assets/aeed1b39-983a-47bb-b3a2-3ad8461f08ec)
 
-   
-6. Observa la salida en la consola y verifica los resultados de las pruebas en el informe generado por Serenity.
+5. Observa la salida en la consola y verifica los resultados de las pruebas en el informe generado por Serenity.
 
 Recuerda que es esencial tener todas las dependencias correctamente configuradas en tu archivo `build.gradle` y que el navegador Chrome esté actualizado.
